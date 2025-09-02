@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Project;
 
 use App\Http\Controllers\Controller;
 use App\Models\Inventory;
+use App\Models\product;
 use Illuminate\Http\Request;
 
 class InventoryController extends Controller
@@ -13,7 +14,8 @@ class InventoryController extends Controller
      */
     public function index()
     {
-        return view('projects.inventory.stock_in');
+        $products = product::Where('user_id', auth()->id())->with('category')->latest()->paginate(10);
+        return view('projects.inventory.stock_in', compact('products'));
     }
 
     /**
@@ -21,7 +23,7 @@ class InventoryController extends Controller
      */
     public function create()
     {
-        //
+        return view('projects.inventory.in.create');
     }
 
     /**

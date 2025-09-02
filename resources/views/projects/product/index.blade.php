@@ -68,7 +68,7 @@
                                         Rp 250.000</td>
                                     <td class="px-4 py-2 border-b">10</td>
                                     <td class="px-4 py-2 border-b">
-                                        <a href="#" class="btn btn-primary">Detail</a>
+                                        <a href="#" class="btn btn-error text-white">Hapus</a>
                                     </td>
                                 </tr>
                                 <tr class="hover:bg-gray-100">
@@ -78,7 +78,7 @@
                                         Rp 250.000</td>
                                     <td class="px-4 py-2 border-b">10</td>
                                     <td class="px-4 py-2 border-b">
-                                        <a href="#" class="btn btn-primary">Detail</a>
+                                        <a href="#" class="btn btn-error text-white">Hapus</a>
                                     </td>
                                 </tr>
                                 <tr class="hover:bg-gray-100">
@@ -88,21 +88,9 @@
                                         Rp 250.000</td>
                                     <td class="px-4 py-2 border-b">10</td>
                                     <td class="px-4 py-2 border-b">
-                                        <a href="#" class="btn btn-error">Hapus</a>
+                                        <a href="#" class="btn btn-error text-white">Hapus</a>
                                     </td>
                                 </tr>
-                                {{-- @foreach ($products as $product)
-                                    <tr>
-                                        <td class="px-4 py-2 border-b">{{ $product->name }}</td>
-                                        <td class="px-4 py-2 border-b">{{ $product->category->name ?? '-' }}</td>
-                                        <td class="px-4 py-2 border-b">
-                                            Rp{{ number_format($product->price, 0, ',', '.') }}</td>
-                                        <td class="px-4 py-2 border-b">
-                                            <a href="{{ route('products.show', $product) }}"
-                                                class="text-blue-600 hover:underline">Detail</a>
-                                        </td>
-                                    </tr>
-                                @endforeach --}}
                             </tbody>
                         </table>
                     </div>

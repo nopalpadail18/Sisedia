@@ -33,10 +33,13 @@ php artisan key:generate
 # DB_PASSWORD=
 php artisan migrate
 
-# 5. Jalankan aplikasi (opsi 1: sekaligus backend & frontend)
+# 5. Create Dummy User
+php artisan migrate:fresh --seed
+
+# 6. Jalankan aplikasi (opsi 1: sekaligus backend & frontend)
 composer run dev
 
-# 6. Atau jalankan secara terpisah (opsi 2: buka 2 terminal)
+# 7. Atau jalankan secara terpisah (opsi 2: buka 2 terminal)
 # Terminal 1 - Backend
 php artisan serve
 

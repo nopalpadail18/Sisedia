@@ -5,7 +5,7 @@ Sisedia adalah aplikasi berbasis Laravel + Vite yang dirancang untuk membantu UM
 
 ---
 
-## 🚀 Setup & Jalankan Project (Alur Tunggal)
+## 🚀 Setup Aplikasi
 
 Ikuti langkah-langkah berikut untuk menjalankan aplikasi secara lokal:  
 

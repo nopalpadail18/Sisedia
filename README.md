@@ -5,56 +5,40 @@ Sisedia adalah aplikasi berbasis Laravel + Vite yang dirancang untuk membantu UM
 
 ---
 
-## 🚀 Setup Project
+## 🚀 Setup & Jalankan Project (Alur Tunggal)
 
-Ikuti langkah-langkah berikut untuk menjalankan aplikasi ini secara lokal:
+Ikuti langkah-langkah berikut untuk menjalankan aplikasi secara lokal:  
 
-### 1. Clone Repository
 ```bash
+# 1. Clone repository
 git clone https://github.com/username/sisedia.git
 cd sisedia
 
-### 2. Install Dependencies
-```bash
+# 2. Install dependencies PHP & JS
 composer install
 npm install
 
-### 3. Konfigurasi Environment
-
-Salin file .env.example menjadi .env:
-```bash
+# 3. Setup environment
 cp .env.example .env
-
-### 4. Generate Application Key
-```bash
 php artisan key:generate
 
-### 5. Setup Database
+# 4. Setup database
+# -> Edit file .env sesuai konfigurasi database kamu
+# Contoh untuk MySQL:
+# DB_CONNECTION=mysql
+# DB_HOST=127.0.0.1
+# DB_PORT=3306
+# DB_DATABASE=sisedia
+# DB_USERNAME=root
+# DB_PASSWORD=
+php artisan migrate
 
-Buat database baru di MySQL/PostgreSQL sesuai kebutuhan.
-Update konfigurasi database di file .env
-
-```bash
-DB_CONNECTION=mysql
-DB_HOST=127.0.0.1
-DB_PORT=3306
-DB_DATABASE=sisedia
-DB_USERNAME=root
-DB_PASSWORD=
-
-### 6. Migrasi Database
-Opsi 1: Jalankan Frontend & Backend Sekaligus
-```bash
+# 5. Jalankan aplikasi (opsi 1: sekaligus backend & frontend)
 composer run dev
 
-Opsi 2: Jalankan Backend & Frontend Secara Terpisah
-Buka 2 terminal:
-
-```bash
+# 6. Atau jalankan secara terpisah (opsi 2: buka 2 terminal)
 # Terminal 1 - Backend
 php artisan serve
 
-```bash
 # Terminal 2 - Frontend
 npm run dev
-
